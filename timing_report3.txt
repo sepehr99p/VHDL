@@ -1,0 +1,698 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Sun May 24 14:49:42 MDT 2019
+| Date         : Sun Jul 10 22:48:58 07/10
+| Host         : DESKTOP-AGGRMTS running 64-bit major release  (build 9200)
+| Command      : report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_4 -file C:/Users/fateme/Desktop/finalp/timing_report3.txt
+| Design       : INCUBATOR
+| Device       : 7vx485t-ffg1157
+| Speed File   : -1  PRODUCTION 1.12 2014-09-11
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  No
+  Borrow Time for Max Delay Exceptions       :  Yes
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock
+2. checking constant_clock
+3. checking pulse_width_clock
+4. checking unconstrained_internal_endpoints
+5. checking no_input_delay
+6. checking no_output_delay
+7. checking multiple_clock
+8. checking generated_clocks
+9. checking loops
+10. checking partial_input_delay
+11. checking partial_output_delay
+12. checking latch_loops
+
+1. checking no_clock
+--------------------
+ There are 8 register/latch pins with no clock driven by root clock pin: CLK (HIGH)
+
+CRS/FAN_SPEED_reg[1]/C
+CRS/FAN_SPEED_reg[2]/C
+CRS/FAN_SPEED_reg[3]/C
+CRS/FSM_sequential_STATE_FAN_reg[0]/C
+CRS/FSM_sequential_STATE_FAN_reg[1]/C
+DC/FSM_sequential_STATE_reg[0]/C
+DC/FSM_sequential_STATE_reg[1]/C
+VT/VALID_reg/C
+
+
+2. checking constant_clock
+--------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock
+-----------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints
+--------------------------------------------
+ There are 15 pins that are not constrained for maximum delay. (HIGH)
+
+CRS/FAN_SPEED_reg[1]/CLR
+CRS/FAN_SPEED_reg[1]/D
+CRS/FAN_SPEED_reg[2]/CLR
+CRS/FAN_SPEED_reg[2]/D
+CRS/FAN_SPEED_reg[3]/CLR
+CRS/FAN_SPEED_reg[3]/D
+CRS/FSM_sequential_STATE_FAN_reg[0]/CLR
+CRS/FSM_sequential_STATE_FAN_reg[0]/D
+CRS/FSM_sequential_STATE_FAN_reg[1]/CLR
+CRS/FSM_sequential_STATE_FAN_reg[1]/D
+DC/FSM_sequential_STATE_reg[0]/CLR
+DC/FSM_sequential_STATE_reg[0]/D
+DC/FSM_sequential_STATE_reg[1]/CLR
+DC/FSM_sequential_STATE_reg[1]/D
+VT/VALID_reg/D
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay
+--------------------------
+ There are 9 input ports with no input delay specified. (HIGH)
+
+RESET
+TEMPERATURE[0]
+TEMPERATURE[1]
+TEMPERATURE[2]
+TEMPERATURE[3]
+TEMPERATURE[4]
+TEMPERATURE[5]
+TEMPERATURE[6]
+TEMPERATURE[7]
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay
+---------------------------
+ There are 6 ports with no output delay specified. (HIGH)
+
+COOLER
+FAN_SPEED[1]
+FAN_SPEED[2]
+FAN_SPEED[3]
+HEATER
+VALID
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock
+--------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks
+----------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops
+-----------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay
+--------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay
+---------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops
+------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+        inf        0.000                      0                   21          inf        0.000                      0                   21           NA           NA                      NA                    NA  
+
+
+There are no user specified timing constraints.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| User Ignored Path Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock    
+----------    ----------    --------    
+
+
+------------------------------------------------------------------------------------------------
+| Unconstrained Path Table
+| ------------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock    
+----------    ----------    --------    
+(none)                                    
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------
+Path Group:  (none)
+From Clock:  
+  To Clock:  
+
+Max Delay            21 Endpoints
+Min Delay            21 Endpoints
+--------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 DC/FSM_sequential_STATE_reg[1]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            COOLER
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        3.680ns  (logic 2.715ns (73.764%)  route 0.966ns (26.236%))
+  Logic Levels:           3  (FDCE=1 LUT2=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDCE                         0.000     0.000 r  DC/FSM_sequential_STATE_reg[1]/C
+                         FDCE (Prop_fdce_C_Q)         0.269     0.269 r  DC/FSM_sequential_STATE_reg[1]/Q
+                         net (fo=6, unplaced)         0.382     0.651    DC/Q[1]
+                                                                      r  DC/COOLER_OBUF_inst_i_1/I0
+                         LUT2 (Prop_lut2_I0_O)        0.153     0.804 r  DC/COOLER_OBUF_inst_i_1/O
+                         net (fo=1, unplaced)         0.584     1.388    COOLER_OBUF
+                                                                      r  COOLER_OBUF_inst/I
+                         OBUF (Prop_obuf_I_O)         2.293     3.680 r  COOLER_OBUF_inst/O
+                         net (fo=0)                   0.000     3.680    COOLER
+                                                                      r  COOLER (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 DC/FSM_sequential_STATE_reg[0]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            HEATER
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        3.680ns  (logic 2.715ns (73.764%)  route 0.966ns (26.236%))
+  Logic Levels:           3  (FDCE=1 LUT2=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDCE                         0.000     0.000 r  DC/FSM_sequential_STATE_reg[0]/C
+                         FDCE (Prop_fdce_C_Q)         0.269     0.269 r  DC/FSM_sequential_STATE_reg[0]/Q
+                         net (fo=6, unplaced)         0.382     0.651    DC/Q[0]
+                                                                      r  DC/HEATER_OBUF_inst_i_1/I0
+                         LUT2 (Prop_lut2_I0_O)        0.153     0.804 r  DC/HEATER_OBUF_inst_i_1/O
+                         net (fo=1, unplaced)         0.584     1.388    HEATER_OBUF
+                                                                      r  HEATER_OBUF_inst/I
+                         OBUF (Prop_obuf_I_O)         2.293     3.680 r  HEATER_OBUF_inst/O
+                         net (fo=0)                   0.000     3.680    HEATER
+                                                                      r  HEATER (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 CRS/FAN_SPEED_reg[1]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            FAN_SPEED[1]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        3.250ns  (logic 2.667ns (82.046%)  route 0.584ns (17.954%))
+  Logic Levels:           2  (FDCE=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDCE                         0.000     0.000 r  CRS/FAN_SPEED_reg[1]/C
+                         FDCE (Prop_fdce_C_Q)         0.269     0.269 r  CRS/FAN_SPEED_reg[1]/Q
+                         net (fo=1, unplaced)         0.584     0.853    FAN_SPEED_OBUF[1]
+                                                                      r  FAN_SPEED_OBUF[1]_inst/I
+                         OBUF (Prop_obuf_I_O)         2.398     3.250 r  FAN_SPEED_OBUF[1]_inst/O
+                         net (fo=0)                   0.000     3.250    FAN_SPEED[1]
+                                                                      r  FAN_SPEED[1] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 CRS/FAN_SPEED_reg[2]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            FAN_SPEED[2]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        3.250ns  (logic 2.667ns (82.046%)  route 0.584ns (17.954%))
+  Logic Levels:           2  (FDCE=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDCE                         0.000     0.000 r  CRS/FAN_SPEED_reg[2]/C
+                         FDCE (Prop_fdce_C_Q)         0.269     0.269 r  CRS/FAN_SPEED_reg[2]/Q
+                         net (fo=1, unplaced)         0.584     0.853    FAN_SPEED_OBUF[2]
+                                                                      r  FAN_SPEED_OBUF[2]_inst/I
+                         OBUF (Prop_obuf_I_O)         2.398     3.250 r  FAN_SPEED_OBUF[2]_inst/O
+                         net (fo=0)                   0.000     3.250    FAN_SPEED[2]
+                                                                      r  FAN_SPEED[2] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 CRS/FAN_SPEED_reg[3]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            FAN_SPEED[3]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        3.250ns  (logic 2.667ns (82.046%)  route 0.584ns (17.954%))
+  Logic Levels:           2  (FDCE=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDCE                         0.000     0.000 r  CRS/FAN_SPEED_reg[3]/C
+                         FDCE (Prop_fdce_C_Q)         0.269     0.269 r  CRS/FAN_SPEED_reg[3]/Q
+                         net (fo=1, unplaced)         0.584     0.853    FAN_SPEED_OBUF[3]
+                                                                      r  FAN_SPEED_OBUF[3]_inst/I
+                         OBUF (Prop_obuf_I_O)         2.398     3.250 r  FAN_SPEED_OBUF[3]_inst/O
+                         net (fo=0)                   0.000     3.250    FAN_SPEED[3]
+                                                                      r  FAN_SPEED[3] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 VT/VALID_reg/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            VALID
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        3.250ns  (logic 2.667ns (82.046%)  route 0.584ns (17.954%))
+  Logic Levels:           2  (FDRE=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDRE                         0.000     0.000 r  VT/VALID_reg/C
+                         FDRE (Prop_fdre_C_Q)         0.269     0.269 r  VT/VALID_reg/Q
+                         net (fo=3, unplaced)         0.584     0.853    VALID_OBUF
+                                                                      r  VALID_OBUF_inst/I
+                         OBUF (Prop_obuf_I_O)         2.398     3.250 r  VALID_OBUF_inst/O
+                         net (fo=0)                   0.000     3.250    VALID
+                                                                      r  VALID (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 TEMPERATURE[1]
+                            (input port)
+  Destination:            DC/FSM_sequential_STATE_reg[1]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.171ns  (logic 0.897ns (41.299%)  route 1.275ns (58.701%))
+  Logic Levels:           4  (IBUF=1 LUT2=1 LUT6=2)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  TEMPERATURE[1] (IN)
+                         net (fo=0)                   0.000     0.000    TEMPERATURE[1]
+                                                                      r  TEMPERATURE_IBUF[1]_inst/I
+                         IBUF (Prop_ibuf_I_O)         0.726     0.726 r  TEMPERATURE_IBUF[1]_inst/O
+                         net (fo=7, unplaced)         0.584     1.309    DC/TEMPERATURE_IBUF[1]
+                                                                      r  DC/FSM_sequential_STATE[1]_i_4/I0
+                         LUT2 (Prop_lut2_I0_O)        0.065     1.374 f  DC/FSM_sequential_STATE[1]_i_4/O
+                         net (fo=2, unplaced)         0.351     1.725    DC/TEMPERATURE[1]
+                                                                      f  DC/FSM_sequential_STATE[1]_i_2/I2
+                         LUT6 (Prop_lut6_I2_O)        0.053     1.778 r  DC/FSM_sequential_STATE[1]_i_2/O
+                         net (fo=1, unplaced)         0.340     2.118    DC/FSM_sequential_STATE[1]_i_2_n_0
+                                                                      r  DC/FSM_sequential_STATE[1]_i_1/I1
+                         LUT6 (Prop_lut6_I1_O)        0.053     2.171 r  DC/FSM_sequential_STATE[1]_i_1/O
+                         net (fo=1, unplaced)         0.000     2.171    DC/FSM_sequential_STATE[1]_i_1_n_0
+                         FDCE                                         r  DC/FSM_sequential_STATE_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 TEMPERATURE[7]
+                            (input port)
+  Destination:            CRS/FSM_sequential_STATE_FAN_reg[0]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.159ns  (logic 0.885ns (40.973%)  route 1.275ns (59.027%))
+  Logic Levels:           4  (IBUF=1 LUT5=2 LUT6=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 f  TEMPERATURE[7] (IN)
+                         net (fo=0)                   0.000     0.000    TEMPERATURE[7]
+                                                                      f  TEMPERATURE_IBUF[7]_inst/I
+                         IBUF (Prop_ibuf_I_O)         0.726     0.726 f  TEMPERATURE_IBUF[7]_inst/O
+                         net (fo=8, unplaced)         0.584     1.309    DC/TEMPERATURE_IBUF[7]
+                                                                      f  DC/FSM_sequential_STATE[1]_i_3/I5
+                         LUT6 (Prop_lut6_I5_O)        0.053     1.362 r  DC/FSM_sequential_STATE[1]_i_3/O
+                         net (fo=2, unplaced)         0.351     1.713    CRS/FSM_sequential_STATE_FAN_reg[0]_1
+                                                                      r  CRS/FSM_sequential_STATE_FAN[0]_i_3/I4
+                         LUT5 (Prop_lut5_I4_O)        0.053     1.766 r  CRS/FSM_sequential_STATE_FAN[0]_i_3/O
+                         net (fo=1, unplaced)         0.340     2.106    CRS/FSM_sequential_STATE_FAN[0]_i_3_n_0
+                                                                      r  CRS/FSM_sequential_STATE_FAN[0]_i_1/I3
+                         LUT5 (Prop_lut5_I3_O)        0.053     2.159 r  CRS/FSM_sequential_STATE_FAN[0]_i_1/O
+                         net (fo=1, unplaced)         0.000     2.159    CRS/FSM_sequential_STATE_FAN[0]_i_1_n_0
+                         FDCE                                         r  CRS/FSM_sequential_STATE_FAN_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 TEMPERATURE[0]
+                            (input port)
+  Destination:            DC/FSM_sequential_STATE_reg[0]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.159ns  (logic 0.885ns (40.973%)  route 1.275ns (59.027%))
+  Logic Levels:           4  (IBUF=1 LUT2=1 LUT6=2)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 f  TEMPERATURE[0] (IN)
+                         net (fo=0)                   0.000     0.000    TEMPERATURE[0]
+                                                                      f  TEMPERATURE_IBUF[0]_inst/I
+                         IBUF (Prop_ibuf_I_O)         0.726     0.726 f  TEMPERATURE_IBUF[0]_inst/O
+                         net (fo=6, unplaced)         0.584     1.309    DC/TEMPERATURE_IBUF[0]
+                                                                      f  DC/FSM_sequential_STATE[0]_i_4/I1
+                         LUT2 (Prop_lut2_I1_O)        0.053     1.362 r  DC/FSM_sequential_STATE[0]_i_4/O
+                         net (fo=2, unplaced)         0.351     1.713    DC/FSM_sequential_STATE[0]_i_4_n_0
+                                                                      r  DC/FSM_sequential_STATE[0]_i_3/I2
+                         LUT6 (Prop_lut6_I2_O)        0.053     1.766 r  DC/FSM_sequential_STATE[0]_i_3/O
+                         net (fo=1, unplaced)         0.340     2.106    DC/FSM_sequential_STATE[0]_i_3_n_0
+                                                                      r  DC/FSM_sequential_STATE[0]_i_1/I4
+                         LUT6 (Prop_lut6_I4_O)        0.053     2.159 r  DC/FSM_sequential_STATE[0]_i_1/O
+                         net (fo=1, unplaced)         0.000     2.159    DC/FSM_sequential_STATE[0]_i_1_n_0
+                         FDCE                                         r  DC/FSM_sequential_STATE_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 TEMPERATURE[5]
+                            (input port)
+  Destination:            CRS/FSM_sequential_STATE_FAN_reg[1]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        2.151ns  (logic 0.888ns (41.265%)  route 1.264ns (58.735%))
+  Logic Levels:           4  (IBUF=1 LUT3=1 LUT6=2)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  TEMPERATURE[5] (IN)
+                         net (fo=0)                   0.000     0.000    TEMPERATURE[5]
+                                                                      r  TEMPERATURE_IBUF[5]_inst/I
+                         IBUF (Prop_ibuf_I_O)         0.726     0.726 r  TEMPERATURE_IBUF[5]_inst/O
+                         net (fo=11, unplaced)        0.584     1.309    CRS/TEMPERATURE_IBUF[5]
+                                                                      r  CRS/FSM_sequential_STATE_FAN[1]_i_4/I5
+                         LUT6 (Prop_lut6_I5_O)        0.053     1.362 r  CRS/FSM_sequential_STATE_FAN[1]_i_4/O
+                         net (fo=1, unplaced)         0.340     1.702    CRS/FSM_sequential_STATE_FAN[1]_i_4_n_0
+                                                                      r  CRS/FSM_sequential_STATE_FAN[1]_i_2/I3
+                         LUT6 (Prop_lut6_I3_O)        0.053     1.755 r  CRS/FSM_sequential_STATE_FAN[1]_i_2/O
+                         net (fo=1, unplaced)         0.340     2.095    DC/FSM_sequential_STATE_FAN_reg[1]
+                                                                      r  DC/FSM_sequential_STATE_FAN[1]_i_1/I1
+                         LUT3 (Prop_lut3_I1_O)        0.056     2.151 r  DC/FSM_sequential_STATE_FAN[1]_i_1/O
+                         net (fo=1, unplaced)         0.000     2.151    CRS/D[0]
+                         FDCE                                         r  CRS/FSM_sequential_STATE_FAN_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 CRS/FSM_sequential_STATE_FAN_reg[0]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            CRS/FAN_SPEED_reg[1]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.278ns  (logic 0.164ns (59.033%)  route 0.114ns (40.967%))
+  Logic Levels:           2  (FDCE=1 LUT2=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDCE                         0.000     0.000 r  CRS/FSM_sequential_STATE_FAN_reg[0]/C
+                         FDCE (Prop_fdce_C_Q)         0.100     0.100 f  CRS/FSM_sequential_STATE_FAN_reg[0]/Q
+                         net (fo=5, unplaced)         0.114     0.214    CRS/STATE_FAN[0]
+                                                                      f  CRS/FAN_SPEED[1]_i_1/I1
+                         LUT2 (Prop_lut2_I1_O)        0.064     0.278 r  CRS/FAN_SPEED[1]_i_1/O
+                         net (fo=1, unplaced)         0.000     0.278    CRS/NEXT_FAN_SPEED[1]
+                         FDCE                                         r  CRS/FAN_SPEED_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 CRS/FSM_sequential_STATE_FAN_reg[1]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            CRS/FAN_SPEED_reg[2]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.279ns  (logic 0.164ns (58.677%)  route 0.115ns (41.323%))
+  Logic Levels:           2  (FDCE=1 LUT2=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDCE                         0.000     0.000 r  CRS/FSM_sequential_STATE_FAN_reg[1]/C
+                         FDCE (Prop_fdce_C_Q)         0.100     0.100 r  CRS/FSM_sequential_STATE_FAN_reg[1]/Q
+                         net (fo=6, unplaced)         0.115     0.215    CRS/STATE_FAN[1]
+                                                                      r  CRS/FAN_SPEED[2]_i_1/I1
+                         LUT2 (Prop_lut2_I1_O)        0.064     0.279 r  CRS/FAN_SPEED[2]_i_1/O
+                         net (fo=1, unplaced)         0.000     0.279    CRS/NEXT_FAN_SPEED[2]
+                         FDCE                                         r  CRS/FAN_SPEED_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 CRS/FSM_sequential_STATE_FAN_reg[0]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            CRS/FAN_SPEED_reg[3]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.280ns  (logic 0.166ns (59.326%)  route 0.114ns (40.674%))
+  Logic Levels:           2  (FDCE=1 LUT2=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDCE                         0.000     0.000 r  CRS/FSM_sequential_STATE_FAN_reg[0]/C
+                         FDCE (Prop_fdce_C_Q)         0.100     0.100 r  CRS/FSM_sequential_STATE_FAN_reg[0]/Q
+                         net (fo=5, unplaced)         0.114     0.214    CRS/STATE_FAN[0]
+                                                                      r  CRS/FAN_SPEED[3]_i_1/I1
+                         LUT2 (Prop_lut2_I1_O)        0.066     0.280 r  CRS/FAN_SPEED[3]_i_1/O
+                         net (fo=1, unplaced)         0.000     0.280    CRS/NEXT_FAN_SPEED[3]
+                         FDCE                                         r  CRS/FAN_SPEED_reg[3]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 DC/FSM_sequential_STATE_reg[0]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            CRS/FSM_sequential_STATE_FAN_reg[1]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.327ns  (logic 0.166ns (50.761%)  route 0.161ns (49.239%))
+  Logic Levels:           2  (FDCE=1 LUT3=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDCE                         0.000     0.000 r  DC/FSM_sequential_STATE_reg[0]/C
+                         FDCE (Prop_fdce_C_Q)         0.100     0.100 f  DC/FSM_sequential_STATE_reg[0]/Q
+                         net (fo=6, unplaced)         0.161     0.261    DC/Q[0]
+                                                                      f  DC/FSM_sequential_STATE_FAN[1]_i_1/I2
+                         LUT3 (Prop_lut3_I2_O)        0.066     0.327 r  DC/FSM_sequential_STATE_FAN[1]_i_1/O
+                         net (fo=1, unplaced)         0.000     0.327    CRS/D[0]
+                         FDCE                                         r  CRS/FSM_sequential_STATE_FAN_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 CRS/FSM_sequential_STATE_FAN_reg[0]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            CRS/FSM_sequential_STATE_FAN_reg[0]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.368ns  (logic 0.164ns (44.563%)  route 0.204ns (55.437%))
+  Logic Levels:           2  (FDCE=1 LUT5=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDCE                         0.000     0.000 r  CRS/FSM_sequential_STATE_FAN_reg[0]/C
+                         FDCE (Prop_fdce_C_Q)         0.100     0.100 r  CRS/FSM_sequential_STATE_FAN_reg[0]/Q
+                         net (fo=5, unplaced)         0.204     0.304    CRS/STATE_FAN[0]
+                                                                      r  CRS/FSM_sequential_STATE_FAN[0]_i_1/I2
+                         LUT5 (Prop_lut5_I2_O)        0.064     0.368 r  CRS/FSM_sequential_STATE_FAN[0]_i_1/O
+                         net (fo=1, unplaced)         0.000     0.368    CRS/FSM_sequential_STATE_FAN[0]_i_1_n_0
+                         FDCE                                         r  CRS/FSM_sequential_STATE_FAN_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 DC/FSM_sequential_STATE_reg[0]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            DC/FSM_sequential_STATE_reg[0]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.370ns  (logic 0.164ns (44.360%)  route 0.206ns (55.640%))
+  Logic Levels:           2  (FDCE=1 LUT6=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDCE                         0.000     0.000 r  DC/FSM_sequential_STATE_reg[0]/C
+                         FDCE (Prop_fdce_C_Q)         0.100     0.100 r  DC/FSM_sequential_STATE_reg[0]/Q
+                         net (fo=6, unplaced)         0.206     0.306    DC/Q[0]
+                                                                      r  DC/FSM_sequential_STATE[0]_i_1/I3
+                         LUT6 (Prop_lut6_I3_O)        0.064     0.370 r  DC/FSM_sequential_STATE[0]_i_1/O
+                         net (fo=1, unplaced)         0.000     0.370    DC/FSM_sequential_STATE[0]_i_1_n_0
+                         FDCE                                         r  DC/FSM_sequential_STATE_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 DC/FSM_sequential_STATE_reg[1]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            DC/FSM_sequential_STATE_reg[1]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.370ns  (logic 0.164ns (44.360%)  route 0.206ns (55.640%))
+  Logic Levels:           2  (FDCE=1 LUT6=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDCE                         0.000     0.000 r  DC/FSM_sequential_STATE_reg[1]/C
+                         FDCE (Prop_fdce_C_Q)         0.100     0.100 r  DC/FSM_sequential_STATE_reg[1]/Q
+                         net (fo=6, unplaced)         0.206     0.306    DC/Q[1]
+                                                                      r  DC/FSM_sequential_STATE[1]_i_1/I3
+                         LUT6 (Prop_lut6_I3_O)        0.064     0.370 r  DC/FSM_sequential_STATE[1]_i_1/O
+                         net (fo=1, unplaced)         0.000     0.370    DC/FSM_sequential_STATE[1]_i_1_n_0
+                         FDCE                                         r  DC/FSM_sequential_STATE_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 RESET
+                            (input port)
+  Destination:            CRS/FAN_SPEED_reg[1]/CLR
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.372ns  (logic 0.126ns (33.956%)  route 0.246ns (66.044%))
+  Logic Levels:           1  (IBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 f  RESET (IN)
+                         net (fo=0)                   0.000     0.000    RESET
+                                                                      f  RESET_IBUF_inst/I
+                         IBUF (Prop_ibuf_I_O)         0.126     0.126 f  RESET_IBUF_inst/O
+                         net (fo=7, unplaced)         0.246     0.372    CRS/AR[0]
+                         FDCE                                         f  CRS/FAN_SPEED_reg[1]/CLR
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 RESET
+                            (input port)
+  Destination:            CRS/FAN_SPEED_reg[2]/CLR
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.372ns  (logic 0.126ns (33.956%)  route 0.246ns (66.044%))
+  Logic Levels:           1  (IBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 f  RESET (IN)
+                         net (fo=0)                   0.000     0.000    RESET
+                                                                      f  RESET_IBUF_inst/I
+                         IBUF (Prop_ibuf_I_O)         0.126     0.126 f  RESET_IBUF_inst/O
+                         net (fo=7, unplaced)         0.246     0.372    CRS/AR[0]
+                         FDCE                                         f  CRS/FAN_SPEED_reg[2]/CLR
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 RESET
+                            (input port)
+  Destination:            CRS/FAN_SPEED_reg[3]/CLR
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.372ns  (logic 0.126ns (33.956%)  route 0.246ns (66.044%))
+  Logic Levels:           1  (IBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 f  RESET (IN)
+                         net (fo=0)                   0.000     0.000    RESET
+                                                                      f  RESET_IBUF_inst/I
+                         IBUF (Prop_ibuf_I_O)         0.126     0.126 f  RESET_IBUF_inst/O
+                         net (fo=7, unplaced)         0.246     0.372    CRS/AR[0]
+                         FDCE                                         f  CRS/FAN_SPEED_reg[3]/CLR
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+

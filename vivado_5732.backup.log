@@ -1,0 +1,89 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Sun May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Sun May 24 18:01:18 MDT 2019
+# Start of session at: Sun Jul 10 10:46:54 07/10
+# Process ID: 5732
+# Current directory: C:/Users/fateme/Desktop/mid/incubator
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent10560 C:\Users\fateme\Desktop\mid\incubator\incubator.xpr
+# Log file: C:/Users/fateme/Desktop/mid/incubator/vivado.log
+# Journal file: C:/Users/fateme/Desktop/mid/incubator\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/fateme/Desktop/mid/incubator/incubator.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'H:/Vivado/2019.1/data/ip'.
+open_project: Time (s): cpu = 00:00:22 ; elapsed = 00:00:16 . Memory (MB): peak = 799.781 ; gain = 132.555
+update_compile_order -fileset sources_1
+open_run synth_2 -name synth_2
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7vx485tffg1157-1
+INFO: [Device 21-403] Loading part xc7vx485tffg1157-1
+INFO: [Project 1-479] Netlist was created with Vivado 2019.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 10-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1294.973 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:46 ; elapsed = 00:00:47 . Memory (MB): peak = 1466.934 ; gain = 539.719
+create_fileset -constrset constrs_2
+file mkdir C:/Users/fateme/Desktop/mid/incubator/incubator.srcs/constrs_2
+file mkdir C:/Users/fateme/Desktop/mid/incubator/incubator.srcs/constrs_2/new
+close [ open C:/Users/fateme/Desktop/mid/incubator/incubator.srcs/constrs_2/new/poi.xdc w ]
+add_files -fileset constrs_2 C:/Users/fateme/Desktop/mid/incubator/incubator.srcs/constrs_2/new/poi.xdc
+close [ open C:/Users/fateme/Desktop/mid/incubator/incubator.srcs/constrs_2/new/,mn.xdc w ]
+add_files -fileset constrs_2 C:/Users/fateme/Desktop/mid/incubator/incubator.srcs/constrs_2/new/,mn.xdc
+add_files -fileset constrs_2 -norecurse {C:/Users/fateme/Desktop/mid/incubator/incubator.srcs/constrs_2/new/poi.xdc C:/Users/fateme/Desktop/mid/incubator/incubator.srcs/constrs_2/new/,mn.xdc}
+WARNING: [filemgmt 56-12] File 'C:/Users/fateme/Desktop/mid/incubator/incubator.srcs/constrs_2/new/poi.xdc' cannot be added to the project because it already exists in the project, skipping this file
+WARNING: [filemgmt 56-12] File 'C:/Users/fateme/Desktop/mid/incubator/incubator.srcs/constrs_2/new/,mn.xdc' cannot be added to the project because it already exists in the project, skipping this file
+set_property constrset constrs_2 [get_runs synth_2]
+set_property constrset constrs_2 [get_runs impl_2]
+close_design
+open_run synth_2 -name synth_2
+Design is defaulting to impl run constrset: constrs_2
+Design is defaulting to synth run part: xc7vx485tffg1157-1
+INFO: [Project 1-479] Netlist was created with Vivado 2019.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [C:/Users/fateme/Desktop/mid/incubator/incubator.srcs/constrs_2/new/poi.xdc]
+Finished Parsing XDC File [C:/Users/fateme/Desktop/mid/incubator/incubator.srcs/constrs_2/new/poi.xdc]
+Parsing XDC File [C:/Users/fateme/Desktop/mid/incubator/incubator.srcs/constrs_2/new/,mn.xdc]
+Finished Parsing XDC File [C:/Users/fateme/Desktop/mid/incubator/incubator.srcs/constrs_2/new/,mn.xdc]
+INFO: [Opt 10-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2108.613 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:11 ; elapsed = 00:00:06 . Memory (MB): peak = 2127.637 ; gain = 19.031
+export_ip_user_files -of_objects  [get_files C:/Users/fateme/Desktop/mid/incubator/incubator.srcs/constrs_2/new/poi.xdc] -no_script -reset -force -quiet
+remove_files  -fileset constrs_2 C:/Users/fateme/Desktop/mid/incubator/incubator.srcs/constrs_2/new/poi.xdc
+file delete -force C:/Users/fateme/Desktop/mid/incubator/incubator.srcs/constrs_2/new/poi.xdc
+export_ip_user_files -of_objects  [get_files C:/Users/fateme/Desktop/mid/incubator/incubator.srcs/constrs_2/new/,mn.xdc] -no_script -reset -force -quiet
+remove_files  -fileset constrs_2 C:/Users/fateme/Desktop/mid/incubator/incubator.srcs/constrs_2/new/,mn.xdc
+file delete -force C:/Users/fateme/Desktop/mid/incubator/incubator.srcs/constrs_2/new/,mn.xdc
+set_property package_pin "" [get_ports [list  {fan_Speed[3]}]]
+set_property is_loc_fixed true [get_ports [list  {fan_Speed[3]}]]
+set_property is_loc_fixed true [get_ports [list  {fan_Speed[3]} {fan_Speed[2]} {fan_Speed[1]} {fan_Speed[0]}]]
+set_property is_loc_fixed true [get_ports [list  {fan_Speed[3]} {fan_Speed[2]} {fan_Speed[1]} {fan_Speed[0]}]]
+set_property is_loc_fixed true [get_ports [list  {fan_Speed[3]} {fan_Speed[2]} {fan_Speed[1]} {fan_Speed[0]}]]
+undo
+INFO: [Common 17-17] undo 'set_property is_loc_fixed true [get_ports [list  {fan_Speed[3]} {fan_Speed[2]} {fan_Speed[1]} {fan_Speed[0]}]]'
+undo
+INFO: [Common 17-17] undo 'set_property is_loc_fixed true [get_ports [list  {fan_Speed[3]} {fan_Speed[2]} {fan_Speed[1]} {fan_Speed[0]}]]'
+undo
+INFO: [Common 17-17] undo 'set_property is_loc_fixed true [get_ports [list  {fan_Speed[3]} {fan_Speed[2]} {fan_Speed[1]} {fan_Speed[0]}]]'
+undo
+INFO: [Common 17-17] undo 'set_property is_loc_fixed true [get_ports [list  {fan_Speed[3]}]]'
+undo
+INFO: [Common 17-17] undo 'set_property package_pin "" [get_ports [list  {fan_Speed[3]}]]'
+close_design
+reset_run synth_2
+launch_runs synth_2 -jobs 2
+[Sun Jul 10 17:24:33 07/10] Launched synth_2...
+Run output will be captured here: C:/Users/fateme/Desktop/mid/incubator/incubator.runs/synth_2/runme.log
+launch_runs impl_2 -jobs 2
+[Sun Jul 10 17:25:51 07/10] Launched impl_2...
+Run output will be captured here: C:/Users/fateme/Desktop/mid/incubator/incubator.runs/impl_2/runme.log
